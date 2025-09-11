@@ -1,8 +1,8 @@
 package stacks;
 
-public class idk {
+public class hii {
     public static void main(String[] args) {
-        System.out.println("ji");
+        System.out.println("bye");
     }
     
 }
