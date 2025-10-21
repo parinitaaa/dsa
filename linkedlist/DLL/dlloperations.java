@@ -41,6 +41,26 @@ public class dlloperations {
         }
         System.out.println("START");
     }
+    public void display1()
+    {
+        Node temp=head;
+        Node temp1=null;
+        while(temp!=null)
+        {
+            System.out.print(temp.value+"->");
+            temp1=temp;
+            temp=temp.next;
+
+        }
+        System.out.println("END");
+        System.out.println("reversed list");
+        while(temp1!=null)
+        {
+            System.out.print(temp1.value+"->");
+            temp1=temp1.prev;
+        }
+        System.out.println("START");
+    }
 
     public void insertLast(int val)
     {
@@ -159,7 +179,7 @@ public class dlloperations {
        // first.insertFirst(19);
        // first.insertFirst(3);
         
-        first.display();
+        first.display1();
        // first.deleteRandom(3);
         System.out.println("size= "+first.size);
         //first.display();
