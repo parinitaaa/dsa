@@ -36,12 +36,12 @@ public class dlloperations {
         while(temp1!=null)
         {
              System.out.print(temp1.value+" -> ");
-             temp=temp1;
+             temp=temp1; //unnecessary
              temp1=temp1.prev;
         }
         System.out.println("START");
     }
-    public void display1()
+    public void display1() //my own 
     {
         Node temp=head;
         Node temp1=null;
@@ -162,8 +162,7 @@ public class dlloperations {
             temp=temp.next;
         }
     
-     Node temp1=head;
-    temp1=temp.next;
+     Node temp1=temp.next;
     int val=temp1.value;
     temp.next=temp1.next;
     temp1.next.prev=temp;
@@ -178,7 +177,7 @@ public class dlloperations {
         first.insertRandom(100,3);
        // first.insertFirst(19);
        // first.insertFirst(3);
-        
+        //first.display();
         first.display1();
        // first.deleteRandom(3);
         System.out.println("size= "+first.size);
