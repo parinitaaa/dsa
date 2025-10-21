@@ -52,7 +52,7 @@ public class dlloperations {
         Node node=new Node(val);
         Node temp=head;
         while(temp.next!=null)//last element
-        temp=temp.next;
+           temp=temp.next;
         temp.next=node;
         node.next=null;
         node.prev=temp;
@@ -68,6 +68,28 @@ public class dlloperations {
             temp=temp.next;
         }
         return null;
+    }
+    public void insertRandom(int val, int index)
+    {
+        if(index==0)
+        {insertFirst(val);
+         return;
+        }
+         if (index == size) { 
+        insertLast(val);
+        return;
+    }
+        Node node =new Node(val);
+        Node temp=head;
+        for(int i=1;i<index;i++)
+          temp=temp.next;
+        Node temp1=temp.next;
+        temp.next=node;
+        node.prev=temp;
+        node.next=temp1;
+        temp1.prev=node;
+        size++;
+    
     }
      public void insertAfter(int after, int val)
      {
@@ -132,13 +154,15 @@ public class dlloperations {
         dlloperations first= new dlloperations();
         first.insertFirst(1);
         first.insertFirst(6);
-        first.insertFirst(19);
-        first.insertFirst(3);
-        first.insertLast(100);
+        first.insertLast(2);
+        first.insertRandom(100,3);
+       // first.insertFirst(19);
+       // first.insertFirst(3);
+        
         first.display();
-        first.deleteRandom(3);
+       // first.deleteRandom(3);
         System.out.println("size= "+first.size);
-        first.display();
+        //first.display();
     }
     
 }
