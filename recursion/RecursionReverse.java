@@ -1,4 +1,4 @@
-package recursion;
+//package recursion;
 import java.util.Scanner;
 public class RecursionReverse {
     
@@ -22,5 +22,6 @@ static boolean palindrome(int n)
 {
     return n==reverse(n,0);
 }
+
 
 }

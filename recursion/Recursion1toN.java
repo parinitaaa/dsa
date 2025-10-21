@@ -1,4 +1,4 @@
-package recursion;
+//package recursion;
 import java.util.Scanner;
 public class Recursion1toN {
      public static void main(String[] args) {

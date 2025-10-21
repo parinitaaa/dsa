@@ -1,4 +1,4 @@
-package recursion;
+//package recursion;
 import java.util.Scanner;
 public class RecursionArraySorted {
     public static void main(String[] args) {

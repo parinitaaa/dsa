@@ -1,4 +1,4 @@
-package recursion;
+//package recursion;
 import java.util.Scanner;
 public class RecursionFactorial {
     public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class RecursionFactorial {
     }
     static int fact(int num)
     {
-        if(num<2) //num<=1
+        if(num==1) //num<=1
         return 1;
         return num*fact(num-1);
         

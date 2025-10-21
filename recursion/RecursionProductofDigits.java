@@ -1,4 +1,4 @@
-package recursion;
+//package recursion;
 import java.util.Scanner;
 public class RecursionProductofDigits {
     public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class RecursionProductofDigits {
 }
 static int prod(int num)
 {
-    if(num==0)
+    if(num==0) //if one digit is remaining, return that digit only-> n%10==n then return n
     return 1;
     return num%10*prod(num/10);
 }

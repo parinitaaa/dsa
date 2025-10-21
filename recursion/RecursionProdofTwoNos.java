@@ -1,4 +1,4 @@
-package recursion;
+//package recursion;
 import java.util.Scanner;
 public class RecursionProdofTwoNos {
     public static void main(String[] args) {

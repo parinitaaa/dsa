@@ -33,8 +33,22 @@ public class slloperations {
         tail=node;
         size++;
     }
+    public void insertLastwithouttail(int val){
+        Node node=new Node(val);
+        if(head==null)
+        { head=node;
+            size++;
+            return;}
+         Node temp=head;
+         while(temp.next!=null)
+          temp=temp.next;
+          temp.next=node;
+          size++;
+
+    }
     public void insertRandom(int val, int index)
     {
+        Node node=new Node(val);
         if(index==0){ insertFront(val) ; return;}
         if(index==size){ insertLast(val); return;}
         Node temp=head;
@@ -42,7 +56,7 @@ public class slloperations {
         {
            temp=temp.next;
         }
-        Node node=new Node(val,temp.next);
+        node.next=temp.next; //Node node=new Node(val,temp.next);
         temp.next=node;
         size++;
         
@@ -87,16 +101,16 @@ public class slloperations {
 
     public void deleteLast()
     {
-        if(size<=1) {deleteFirst(); return;}
+        if(size<=1) {deleteFirst(); return;} //no elements or 1element
         Node temp=get(size-2); //-2 cause index over here; for last element=-1
           /*   for(int i=2;i<size;i++) //i=2 to access the second last element
             {
                 temp=temp.next;
             } */
 
-        int val=tail.value;
+        int val=temp.next.value;
         tail=temp;
-        tail.next=null; //tail.next=temp.next  both are same, use any one
+        temp.next=null; //tail.next=temp.next  both are same, use any one
         size--;
         System.out.println("deleted element is "+ val);
     }
@@ -153,16 +167,17 @@ public void deleteRandom(int index)
 
         first.insertFront(3);
         first.insertFront(4);
-        first.insertFront(1);
-        first.insertFront(5);
-        first.insertLast(18);
-        first.insertRandom(300, 3);
-        first.insertRecursion(100, 3);
+        //first.insertFront(1);
+        //first.insertFront(5);
+        //first.insertLastwithouttail(18);
+        first.insertRandom(300, 0);
+        first.deleteLast();
+        //first.insertRecursion(100, 3);
         System.out.println("size= "+first.size);
         first.display();
-        first.deleteRandom(2);
-        first.display();
-        System.out.println("size= "+first.size);
+       // first.deleteRandom(2);
+        //first.display();
+        //System.out.println("size= "+first.size);
     }
 
 

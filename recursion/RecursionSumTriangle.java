@@ -1,4 +1,4 @@
-package recursion;
+//package recursion;
 import java.util.Arrays;
 public class RecursionSumTriangle {
     public static void printTriangle(int[] A)
